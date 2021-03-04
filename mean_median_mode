@@ -1,0 +1,43 @@
+import numpy as np
+import random
+from scipy import stats
+
+# MEAN calculates the sum of all values in a list divisible by the number of elemnets in a list   
+test1= list(np.random.randint(low = 1,high=99,size=10))
+test2=list(np.random.randint(low = 1,high=99,size=10))
+test3=list(np.random.randint(low = 1,high=99,size=10))
+test4=list(np.random.randint(low = 1,high=99,size=10))
+test5=list(np.random.randint(low = 1,high=99,size=10))
+
+def mean(a,size):
+    sum=0
+    for i in range(0,size):
+        sum+=a[i]
+    Mean=sum/size
+    return Mean
+        
+print(mean(test1,len(test1)))
+print(mean(test2,len(test2)))
+print(mean(test3,len(test3)))
+print(mean(test4,len(test4)))
+print(mean(test5,len(test5)))
+
+#MEDIAN is the value in the  middle of a sorted list 
+#def median(a,size):
+ #   print(a.sort())
+    
+    
+    
+#print(median(test1,len(test1)))
+print(np.median(test1))
+print(np.median(test2))
+print(np.median(test3))
+print(np.median(test4))
+print(np.median(test5))
+
+#MODE is the number that appers the most in a list
+print(stats.mode(test1))
+print(stats.mode(test2))
+print(stats.mode(test3))
+print(stats.mode(test4))
+print(stats.mode(test5))
